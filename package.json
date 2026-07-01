@@ -1,0 +1,17 @@
+{
+  "name": "spacex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "scripts": {
+    "build": "sass scss/global.scss css/global.css",
+    "watch": "sass --watch scss/global.scss css/global.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}

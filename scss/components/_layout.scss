@@ -1,0 +1,28 @@
+body {
+  background: radial-gradient(700px 360px at 18% -10%, rgba(128, 0, 128, 0.5), transparent 60%), radial-gradient(520px 420px at 100% 0%, rgba(231, 192, 106, 0.16), transparent 55%) rgb(36, 8, 38);
+  color: var(--text);
+  padding: 5rem 0 0 0;
+}
+
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btm-space {
+  padding-block-end: 40px;
+}
+
+.l-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 22px;
+  padding-block-end: 40px;
+}
+
+.toggles {
+  display: flex;
+  gap: 20px;
+  margin-block: 20px;
+}

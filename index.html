@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Launch Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+  <header>
+    <div class="header-wrapper">
+      <div class="c-header__group">
+        <div class="c-header__brow">
+          <span class="c-header__icon">
+            <svg data-dc-tpl="16" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path data-dc-tpl="17" d="M12 2.5c2.6 1.6 4 4.7 4 8.2 0 2.2-.7 4.1-1.6 5.6H9.6C8.7 14.8 8 12.9 8 10.7c0-3.5 1.4-6.6 4-8.2z"></path><circle data-dc-tpl="18" cx="12" cy="9.4" r="1.6"></circle><path data-dc-tpl="19" d="M9.4 16.3 7 19.5l2.4-.5M14.6 16.3 17 19.5l-2.4-.5"></path></svg>
+          </span>
+          <p class="c-header__title">Live - Upcoming Launces</p>
+        </div>
+        <h1>Mission Manifest</h1>
+      </div>
+      <div class="c-search-bar">
+        <div class="form-input">
+          <label class="visually-hidden" for="keywords">Enter in Keywords</label>
+          <input id="keywords" class="c-search-bar__keyword" type="text" placeholder="Search launches"/>
+        </div>
+        <div class="c-search-bar__actions">
+          <button class="c-search-bar__clear" type="button">Clear</button>
+          <input class="c-search-bar__submit button" type="submit" value="Search"/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="toggles">
+      <div class="toggle-button">
+        <button data-target=".l-upcoming" class="btn btn-secondary active upcoming">Upcoming</button>
+      </div>
+      <div class="toggle-button">
+        <button data-target=".l-previous" class="btn btn-secondary past">Passed</button>
+      </div>
+    </div>
+
+    <section class="upcoming-launches l-upcoming btm-space">
+      <h2 class="visually-hidden">Upcoming Launches</h2>
+      <div class="l-card-grid"></div>
+      <div class="c-drawer__overlay">
+        <div class="c-drawer">
+          <button class="c-drawer__close" aria-label="close">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg>
+          </button>
+          <div class="c-drawer__content"></div>
+        </div>
+      </div>
+      <button class="btn btn-secondary show-more" data-container=".l-upcoming">Show More</button>
+    </section>
+
+    <section class="passed-launch l-previous btm-space" hidden>
+      <h2 class="visually-hidden">Passed Launches</h2>
+      <div class="l-card-grid"></div>
+      <div class="c-drawer"></div>
+      <button class="btn btn-secondary show-more" data-container=".l-previous">Show More</button>
+    </section>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>

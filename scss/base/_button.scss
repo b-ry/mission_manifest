@@ -1,0 +1,48 @@
+.btn, button {
+  appearance: none;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0 1.6rem;
+  border-radius: 1rem;
+  width: fit-content;
+  cursor: pointer;
+  block-size: 4.4rem;
+  transition: all .2s ease-in-out;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  svg {
+    inline-size: 1.2rem;
+  }
+  &:hover {
+    box-shadow: rgba(231, 192, 106, 0.4) 0px 0px 0px 5px;
+    gap: 1.4rem;
+  }
+}
+
+.btn-secondary {
+  background: var(--background);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    background: var(--gold);
+    color: var(--background);
+  }
+
+  &:hover {
+    background: var(--gold);
+    color: var(--background);
+  }
+}

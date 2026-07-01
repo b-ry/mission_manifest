@@ -1,0 +1,64 @@
+header {
+  color: white;
+  padding: 20px 0;
+}
+
+header .header-wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-header__group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.c-header__brow {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.c-header__title {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: .26rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.c-header__icon {
+  background: var(--primary);
+  box-shadow: 0 0 1.6rem 1rem color-mix(in srgb, var(--primary) 60%, transparent 100%);
+  inline-size: 4rem;
+  block-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.6rem;
+
+  svg {
+    block-size: 2.2rem;
+    inline-size: 2.2rem;
+  }
+}
+
+header h1 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 5.6rem;
+  font-weight: 800;
+}
+
+h1 span {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin-inline-end: 10px;
+}

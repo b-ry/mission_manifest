@@ -1,0 +1,229 @@
+
+.c-card {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--gold) 22%, transparent);
+  border-radius: 2rem;
+  transition: max-height 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.c-card.is-hidden {
+  display: none;
+}
+
+.c-card.is-visible {
+  max-height: 660px;
+}
+
+.c-card__image-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+.c-card__image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(36, 8, 38, 0) 40%, rgba(52, 16, 58, 0.95) 100%);
+  z-index: 2;
+}
+
+.c-card__image-wrapper time {
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0,0,0,.5);
+  color: white;
+  padding: .6rem 1rem;
+  font-size: 1.8rem;
+}
+
+.c-card__image {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background-color: var(--primary-deep);
+  border-radius: .8rem .8rem 0 0;
+  overflow: hidden;
+}
+
+.c-card__image::before {
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/orbit.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  opacity: .25;
+}
+
+.c-card__image img {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  max-width: 100%;
+  display: block;
+  color: transparent;
+}
+
+.c-card__title-group {
+  display: flex;
+  align-items: center;
+  margin: 0 0 .4rem;
+}
+
+.c-card__status {
+  width: fit-content;
+  z-index: 5;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border: 1px solid;
+  font-weight: 700;
+  padding: .7rem 1.2rem;
+  border-radius: 99rem;
+  letter-spacing: 0.04rem;
+  margin-inline-end: 1rem;
+
+  &.go {
+    color: var(--green);
+    background: color-mix(in srgb, var(--green) 15%, transparent);
+  }
+
+  &.tbd {
+    color: var(--gold);
+    background: color-mix(in srgb, var(--gold) 15%, transparent);
+  }
+
+  &.tbc {
+    color: var(--lavender);
+    background: color-mix(in srgb, var(--lavender) 15%, transparent);
+  }
+}
+
+.c-card__location {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 1.6rem;
+  z-index: 5;
+  font-size: 1.3rem;
+  color: var(--text);
+  font-weight: 500;
+  display: flex;
+  gap: .8rem;
+
+  svg {
+    block-size: 1.4rem;
+    color: var(--gold);
+  }
+}
+
+  .c-card__content {
+  padding: 2rem 2.2rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.c-card__mission-name {
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.c-card__agency-name {
+  color: var(--muted-text);
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-block-end: 1.8rem;
+}
+
+.c-card__time-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 1.6rem;
+}
+
+.c-card__countdown-time {
+  color: var(--gold);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .16rem;
+}
+
+.c-card__countdown-date {
+  color: var(--muted-text);
+  font-size: 1.3rem;
+  display: flex;
+  gap: .8rem;
+  align-items: center;
+
+  svg {
+    color: var(--muted-text);
+    inline-size: 1rem;
+  }
+}
+
+.c-card__more-button {
+  width: 100%;
+  margin-block-start: auto;
+}
+
+
+/* Clock */
+.c-card__countdown {
+  top: 1rem;
+  left: 1rem;
+  color: white;
+  font-family: var(--digital);
+  z-index: 2;
+  display: flex;
+  gap: .8rem;
+  margin-block-end: 1.8rem;
+}
+
+.c-card__countdown-unit {
+  flex: 1 1 0%;
+  text-align: center;
+  background: rgb(28, 6, 32);
+  border: 1px solid rgba(231, 192, 106, 0.25);
+  border-radius: 1rem;
+  padding: 1.2rem 0;
+
+  &:last-of-type {
+    border-color: var(--gold);
+
+    .c-card__countdown-value {
+      color: var(--gold);
+    }
+  }
+}
+
+.c-card__countdown-unit {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.c-card__countdown-value {
+  color: var(--text);
+  font-size: 2.6rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-card__countdown-label {
+  font-size: 1.2rem;
+  color: var(--muted-text);
+  text-transform: uppercase;
+}
