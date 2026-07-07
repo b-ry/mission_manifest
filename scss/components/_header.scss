@@ -1,15 +1,15 @@
 header {
   color: white;
-  padding: 20px 0;
+  padding: 2rem 0;
 }
 
 header .header-wrapper {
-  max-width: 1180px;
+  max-width: 118rem;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .c-header__group {
@@ -58,7 +58,7 @@ header h1 {
 
 h1 span {
   display: inline-block;
-  height: 60px;
-  width: 60px;
-  margin-inline-end: 10px;
+  height: 6rem;
+  width: 6rem;
+  margin-inline-end: 1rem;
 }

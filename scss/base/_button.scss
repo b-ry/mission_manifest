@@ -2,13 +2,23 @@
   appearance: none;
   border: none;
   font-size: 1.6rem;
-  font-weight: bold;
+  font-weight: 700;
   padding: 0 1.6rem;
   border-radius: 1rem;
   width: fit-content;
   cursor: pointer;
   block-size: 4.4rem;
   transition: all .2s ease-in-out;
+
+  &:focus-visible {
+    outline: .3rem solid var(--gold);
+    outline-offset: .3rem;
+  }
+}
+
+input:focus-visible {
+  outline: .3rem solid var(--gold);
+  outline-offset: .3rem;
 }
 
 .btn-primary {
@@ -30,7 +40,7 @@
 
 .btn-secondary {
   background: var(--background);
-  border: 1px solid var(--gold);
+  border: .1rem solid var(--gold);
   color: var(--gold);
   display: flex;
   justify-content: center;

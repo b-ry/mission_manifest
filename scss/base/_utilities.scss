@@ -7,3 +7,20 @@
   height: 1px;
   word-wrap: normal;
 }
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1.6rem;
+  z-index: 9999;
+  padding: 1rem 1.6rem;
+  background: var(--gold);
+  color: var(--background);
+  font-weight: 700;
+  border-radius: 0 0 1rem 1rem;
+  text-decoration: none;
+
+  &:focus {
+    top: 0;
+  }
+}

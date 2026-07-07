@@ -1,12 +1,12 @@
 /* Search */
 .c-search-bar {
   display: flex;
-  max-inline-size: 320px;
-  gap: 10px;
+  max-inline-size: 32rem;
+  gap: 1rem;
 }
 
 .c-search-bar .form-input {
-  inline-size: calc(100% - 100px);
+  inline-size: calc(100% - 10rem);
 }
 
 .c-search-bar__keyword {
@@ -20,13 +20,13 @@
 
 .c-search-bar__clear {
   position: absolute;
-  left: -53px;
+  left: -5.3rem;
 }
 
 .show-more {
   /* display: block; */
   margin: 0 auto;
-  padding: 12px 24px;
+  padding: 1.2rem 2.4rem;
   font-size: 18px;
 
   &.is-hidden {
@@ -35,9 +35,43 @@
 }
 
 input {
-  border-radius: 6px;
-  padding: 8px 16px;
-  font-size: 16px;
+  border-radius: .6rem;
+  padding: .8rem 1.6rem;
+  font-size: 1.6rem;
   border: none;
-  margin-inline-end: 10px;
+  margin-inline-end: 1rem;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.8rem;
+  border: 1px solid var(--gold);
+  block-size: 4.4rem;
+
+  &::placeholder {
+    color: var(--text);
+  }
+
+  &[type="submit"] {
+    font-weight: 700;
+  }
+}
+
+button.c-search-bar__clear {
+  appearance: none;
+  color: var(--text);
+  background: none;
+  border: none;
+  padding: 0;
+  inline-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.hidden {
+    display: none;
+  }
+
+  svg {
+    inline-size: 2rem;
+    block-size: 2rem;
+  }
 }

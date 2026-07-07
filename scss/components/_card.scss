@@ -2,7 +2,7 @@
 .c-card {
   width: 100%;
   background: var(--surface);
-  border: 1px solid color-mix(in srgb, var(--gold) 22%, transparent);
+  border: .1rem solid color-mix(in srgb, var(--gold) 22%, transparent);
   border-radius: 2rem;
   transition: max-height 0.4s ease;
   display: flex;
@@ -15,7 +15,7 @@
 }
 
 .c-card.is-visible {
-  max-height: 660px;
+  max-height: 66rem;
 }
 
 .c-card__image-wrapper {
